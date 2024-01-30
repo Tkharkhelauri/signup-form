@@ -1,0 +1,24 @@
+:root {
+	--color-red: 0, 100%, 74%;
+	--color-green: 154, 59%, 51%;
+	--color-blue: 248, 32%, 49%;
+	--color-darkblue: 249, 10%, 26%;
+	--color-grblue: 246, 25%, 77%;
+	--color-white: 
+
+	--ff-primary: 'Poppins';
+	--ff-fallback: sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url(/assets/bg-intro-desktop.png);
+	background-color: hsl(var(--color-red));
+}
+.header {
+	color: white;
+	
+}

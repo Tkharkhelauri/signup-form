@@ -4,10 +4,27 @@
 	--color-blue: 248, 32%, 49%;
 	--color-darkblue: 249, 10%, 26%;
 	--color-grblue: 246, 25%, 77%;
-	--color-white: 
+	--color-grey: 0, 10%, 65%;
+	--color-lightgrey: 0, 0%, 60%;
+	--color-wgrey: 0, 1%, 39%;
+	--color-white: 0, 0%, 100%;
+	--color-shadow: 0 59% 60%;
+	--color-border: 11, 1%, 87%;
 
 	--ff-primary: 'Poppins';
 	--ff-fallback: sans-serif;
+}
+/* .flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+} */
+/* .centered {
+	text-align: center;
+} */
+.bold {
+	font-weight: bold;
 }
 
 body {
@@ -19,6 +36,83 @@ body {
 	background-color: hsl(var(--color-red));
 }
 .header {
+	text-decoration-color: hsl(var(--color-white));
+	padding: 0.3rem;
+	margin-inline: 1.5rem;
+	max-width: 375px;
+}
+.header__title,
+.header__description {
 	color: white;
-	
+	text-align: center;
+	max-width: 100%;
+}
+.header__title {
+	font-weight: 600;
+	font-size: 1.7rem;
+}
+.signup__section {
+	margin-inline: 1.5rem;
+}
+
+.offer__button {
+	background-color: hsl(var(--color-blue));
+	padding: 0.2rem;
+	border-radius: 0.6rem;
+	text-align: center;
+	color: white;
+	padding-inline: 3.5rem;
+	margin-bottom: 1.8rem;
+	box-shadow: 0px 8px 0px hsl(var(--color-shadow));
+}
+.signup__section {
+	max-width: 375px;
+}
+.container__form {
+	background-color: hsl(var(--color-white));
+	border-radius: 0.6rem;
+	box-shadow: 0px 8px 0px hsl(var(--color-shadow));
+}
+.form__signup {
+	padding: 1.5rem;
+}
+.form__signup input {
+	padding: 0.9rem;
+	width: -webkit-fill-available;
+	margin-bottom: 1rem;
+	border-radius: 0.3rem;
+}
+.input__fn,
+.input__ln,
+.input__psw,
+.input__email {
+	border: 1px solid hsl(var(--color-border));
+}
+
+input::placeholder {
+	color: hsl(var(--color-wgrey));
+	opacity: 1;
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.submit {
+	background-color: hsl(var(--color-green));
+	text-transform: uppercase;
+	color: hsl(var(--color-white));
+	font-weight: 400;
+	border: 1px solid hsl(var(--color-green));
+	box-shadow: 0px 3px 0px hsl(154, 89%, 32%);
+}
+#submit {
+	margin-bottom: 0;
+}
+.terms {
+	margin-inline: 0.8rem;
+	text-align: center;
+	font-size: 0.7rem;
+	color: hsl(var(--color-lightgrey));
+}
+.bold {
+	color: hsl(var(--color-red));
 }

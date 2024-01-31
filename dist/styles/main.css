@@ -36,7 +36,7 @@ body {
 	background-color: hsl(var(--color-red));
 }
 .header {
-	text-decoration-color: hsl(var(--color-white));
+	/* text-decoration-color: hsl(var(--color-white)); */
 	padding: 0.3rem;
 	margin-inline: 1.5rem;
 	max-width: 375px;
@@ -115,4 +115,24 @@ input::placeholder {
 }
 .bold {
 	color: hsl(var(--color-red));
+}
+@media screen and (min-width: 800px) {
+	body {
+		background-image: url(/assets/bg-intro-desktop.png);
+		flex-direction: row;
+		gap: 5rem;
+	}
+
+	.signup__section {
+		max-width: 30rem;
+	}
+	.header {
+		/* text-decoration-color: hsl(var(--color-white));
+		padding: 0.3rem;
+		margin-inline: 1.5rem; */
+		max-width: 30rem;
+	}
+	.header__title {
+		font-size: 3rem;
+	}
 }

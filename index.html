@@ -19,58 +19,96 @@
 		<title>Intro component with sign up form</title>
 	</head>
 	<body>
-		<header class="header flex centered">
-			<h1 class="header__title flex">Learn to code by watching others</h1>
-			<p class="header__description flex">
+		<!-- <div class="container"> -->
+		<header class="header">
+			<h1 class="header__title">Learn to code by watching others</h1>
+			<p class="header__description">
 				See how experienced developers solve problems in real-time. Watching scripted tutorials
 				is great, but understanding how developers think is invaluable.
 			</p>
 		</header>
-		<section class="signup__section">
-			<div class="offer__button">
-				<p class="offer__description">
-					<strong>Try it free 7 days</strong> then $20/mo. thereafter
-				</p>
+		<section class="signup__container">
+			<div class="trial__offer">
+				<p class="trial__text"><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
 			</div>
-			<div class="container__form">
-				<form class="form__signup" method="post">
-					<input
-						class="input__fn"
-						type="text"
-						id="first-name"
-						name="first-name"
-						required
-						placeholder="First Name"
-					/>
 
-					<input
-						class="input__ln"
-						type="text"
-						id="last-name"
-						name="last-name"
-						required
-						placeholder="Last Name"
-					/>
+			<div class="form__container">
+				<form class="signup__form" id="signup__form" method="post">
+					<div class="input__container" id="firstNameContainer">
+						<input
+							class="firstName"
+							id="firstName"
+							type="text"
+							name="first-name"
+							placeholder="First Name"
+							required
+						/>
+						<img
+							src="./assets/icon-error.svg"
+							alt="Error: exclamation mark"
+							class="error__icon"
+							id="firstNameError"
+						/>
+						<div class="error__message" id="firstNameErrorMessage"></div>
+					</div>
 
-					<input
-						class="input__email"
-						type="email"
-						id="email"
-						name="email"
-						required
-						placeholder="Email Address"
-					/>
+					<div class="input__container" id="lastNameContainer">
+						<input
+							class="lastName"
+							id="lastName"
+							type="text"
+							name="last-name"
+							placeholder="Last Name"
+							required
+						/>
+						<img
+							src="./assets/icon-error.svg"
+							alt="Error: exclamation mark"
+							class="error__icon"
+							id="lastNameError"
+						/>
+						<div class="error__message" id="lastNameErrorMessage"></div>
+					</div>
 
-					<input
-						class="input__psw"
-						type="password"
-						id="password"
-						name="password"
-						required
-						placeholder="Password"
-					/>
+					<div class="input__container" id="emailContainer">
+						<input
+							class="email"
+							id="email"
+							type="email"
+							name="email"
+							placeholder="Email Address"
+							required
+						/>
+						<img
+							src="./assets/icon-error.svg"
+							alt="Error: exclamation mark"
+							class="error__icon"
+							id="emailError"
+						/>
+						<div class="error__message" id="emailErrorMessage"></div>
+					</div>
 
-					<input id="submit" class="submit" type="submit" value="Claim your free trial" />
+					<div class="input__container" id="passwordContainer">
+						<input
+							class="password"
+							type="password"
+							id="password"
+							name="password"
+							required
+							placeholder="Password"
+						/>
+						<img
+							src="./assets/icon-error.svg"
+							alt="Error: exclamation mark"
+							class="error__icon"
+							id="passwordError"
+						/>
+						<div class="error__message" id="passwordErrorMessage"></div>
+					</div>
+
+					<button class="submit" id="submit" type="button" onclick="validateForm()">
+						Claim your free trial
+					</button>
 
 					<p class="terms">
 						By clicking the button, you are agreeing to our
@@ -79,5 +117,7 @@
 				</form>
 			</div>
 		</section>
+		<!-- </div> -->
+		<script src="./dist/styles/main.js"></script>
 	</body>
 </html>

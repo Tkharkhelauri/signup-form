@@ -14,15 +14,7 @@
 	--ff-primary: 'Poppins';
 	--ff-fallback: sans-serif;
 }
-/* .flex {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-} */
-/* .centered {
-	text-align: center;
-} */
+
 .bold {
 	font-weight: bold;
 }
@@ -36,7 +28,6 @@ body {
 	background-color: hsl(var(--color-red));
 }
 .header {
-	/* text-decoration-color: hsl(var(--color-white)); */
 	padding: 0.3rem;
 	margin-inline: 1.5rem;
 	max-width: 375px;
@@ -51,11 +42,11 @@ body {
 	font-weight: 600;
 	font-size: 1.7rem;
 }
-.signup__section {
+.signup__container {
 	margin-inline: 1.5rem;
 }
 
-.offer__button {
+.trial__offer {
 	background-color: hsl(var(--color-blue));
 	padding: 0.2rem;
 	border-radius: 0.6rem;
@@ -65,18 +56,21 @@ body {
 	margin-bottom: 1.8rem;
 	box-shadow: 0px 8px 0px hsl(var(--color-shadow));
 }
-.signup__section {
+.signup__container {
 	max-width: 375px;
 }
-.container__form {
+.form__container {
 	background-color: hsl(var(--color-white));
 	border-radius: 0.6rem;
 	box-shadow: 0px 8px 0px hsl(var(--color-shadow));
 }
-.form__signup {
+#signup__form {
 	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 }
-.form__signup input {
+.signup__form input {
 	padding: 0.9rem;
 	width: -webkit-fill-available;
 	margin-bottom: 1rem;
@@ -95,7 +89,31 @@ input::placeholder {
 	font-size: 0.9rem;
 	font-weight: 500;
 }
+.input__container {
+	position: relative;
+}
+.error__icon {
+	position: absolute;
+	top: 30%;
+	right: 20px;
+	transform: translateY(-50%);
+	display: none;
+}
 
+.error__message {
+	width: 100%;
+	color: hsl(var(--color-red));
+	font-size: 14px;
+	margin-top: 5px;
+	text-align: right;
+}
+.input__container.error input {
+	border: 1px solid hsl(var(--color-red)); /* Set border color to red in error state */
+}
+
+.input__container.error .error__message {
+	color: hsl(var(--color-red));
+}
 .submit {
 	background-color: hsl(var(--color-green));
 	text-transform: uppercase;
@@ -120,19 +138,29 @@ input::placeholder {
 	body {
 		background-image: url(/assets/bg-intro-desktop.png);
 		flex-direction: row;
-		gap: 5rem;
+		/* gap: 5rem; */
 	}
 
-	.signup__section {
-		max-width: 30rem;
+	.signup__container {
+		max-width: 33rem;
 	}
 	.header {
-		/* text-decoration-color: hsl(var(--color-white));
-		padding: 0.3rem;
-		margin-inline: 1.5rem; */
-		max-width: 30rem;
+		max-width: 33rem;
 	}
 	.header__title {
 		font-size: 3rem;
+	}
+	.header__description {
+		font-size: 0.9rem;
+	}
+	.header__description,
+	.header__title {
+		text-align: left;
+	}
+	.offer__button {
+		margin-bottom: 1.4rem;
+	}
+	.submit {
+		cursor: pointer;
 	}
 }

@@ -24,6 +24,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 2rem;
 	background-image: url(/assets/bg-intro-desktop.png);
 	background-color: hsl(var(--color-red));
 }
@@ -70,10 +71,11 @@ body {
 	flex-direction: column;
 	gap: 1.5rem;
 }
-.signup__form input {
+.signup__form input,
+.submit {
 	padding: 0.9rem;
 	width: -webkit-fill-available;
-	margin-bottom: 1rem;
+	/* margin-bottom: 1rem; */
 	border-radius: 0.3rem;
 }
 .input__fn,
@@ -88,6 +90,11 @@ input::placeholder {
 	opacity: 1;
 	font-size: 0.9rem;
 	font-weight: 500;
+}
+
+.input__container input:active,
+.input__container input:focus {
+	border: 1px solid hsl(var(--color-blue));
 }
 .input__container {
 	position: relative;
@@ -142,10 +149,12 @@ input::placeholder {
 	}
 
 	.signup__container {
-		max-width: 33rem;
+		width: 50%;
+		max-width: 35%;
 	}
 	.header {
-		max-width: 33rem;
+		width: 50%;
+		max-width: 35%;
 	}
 	.header__title {
 		font-size: 3rem;

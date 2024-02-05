@@ -37,6 +37,8 @@ function displayError(fieldId, message) {
 	document.getElementById(`${fieldId}Error`).style.display = 'inline-block'
 	// Add error class to input container
 	document.getElementById(`${fieldId}Container`).classList.add('error')
+	const field = document.getElementById(fieldId)
+	field.placeholder = ''
 }
 
 // Function to handle input focus

@@ -115,7 +115,9 @@ input::placeholder {
 	text-align: right;
 }
 .input__container.error input {
-	border: 1px solid hsl(var(--color-red)); /* Set border color to red in error state */
+	border: 1px solid hsl(var(--color-red));
+	/* Set border color to red in error state */
+	placeholder: none;
 }
 
 .input__container.error .error__message {

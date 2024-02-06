@@ -25,7 +25,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
-	background-image: url(/assets/bg-intro-mobile.png);
+	background-image: url(/design/bg-intro-mobile.png);
 	background-color: hsl(var(--color-red));
 }
 .header {
@@ -146,7 +146,7 @@ input::placeholder {
 }
 @media screen and (min-width: 800px) {
 	body {
-		background-image: url(/assets/bg-intro-desktop.png);
+		background-image: url(/design/bg-intro-desktop.png);
 		flex-direction: row;
 		/* gap: 5rem; */
 	}

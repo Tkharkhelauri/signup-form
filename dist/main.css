@@ -113,6 +113,7 @@ input::placeholder {
 	font-size: 14px;
 	margin-top: 5px;
 	text-align: right;
+	font-style: italic;
 }
 .input__container.error input {
 	border: 1px solid #f40000;

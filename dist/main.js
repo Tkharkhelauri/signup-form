@@ -71,5 +71,10 @@ function resetErrorMessages() {
 	fields.forEach(field => {
 		document.getElementById(`${field}ErrorMessage`).innerHTML = ''
 		document.getElementById(`${field}Error`).style.display = 'none'
+		// Restore placeholder if it was removed
+		const inputField = document.getElementById(field)
+		if (!inputField.placeholder) {
+			inputField.placeholder = inputField.getAttribute('data-placeholder')
+		}
 	})
 }

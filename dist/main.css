@@ -25,7 +25,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
-	background-image: url(/assets/bg-intro-desktop.png);
+	background-image: url(/assets/bg-intro-mobile.png);
 	background-color: hsl(var(--color-red));
 }
 .header {

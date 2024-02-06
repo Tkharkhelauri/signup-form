@@ -35,9 +35,10 @@ ol[role='list'] {
 /* Set core body defaults */
 body {
 	min-height: 100vh;
+
 	line-height: 1.5;
 	margin: 0;
-	font-family: var(--ff-primary), var(--ff-fallback);
+	font-family: var(--ff-primary);
 }
 
 /* Set shorter line heights on headings and interactive elements */
